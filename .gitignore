@@ -1,0 +1,4 @@
+# ignoring large csv files
+
+**/*.csv
+**/data/*
