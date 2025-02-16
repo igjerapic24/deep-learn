@@ -2,3 +2,17 @@
 
 **/*.csv
 **/data/*
+**/*.zip
+
+# Leftover files from latex builds
+**/*.log
+**/*.aux
+**/*.bbl
+**/*.fdb_latexmk
+**/*.fls 
+**/*.out 
+**/*.synctex.gz
+**/*.snm
+**/*.toc
+**/*.vrb 
+**/*.nav
