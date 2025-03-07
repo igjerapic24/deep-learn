@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, auc, roc_curve
 
 
-def plot_roc(labels, predictions):
+def plot_roc(labels, predictions, title=None):
     """Plots the ROC curve given a set of labels and predictions
 
     Args:
@@ -20,10 +20,12 @@ def plot_roc(labels, predictions):
     # plot TPR vs. FPR (ROC curve)
     fig = plt.figure()
     plt.plot(fpr, tpr, color="blueviolet", label=f"AUC = {auc_score*100:.2f}%, acc. = {acc_score*100:.2f}%")
+    plt.plot([0,1], [0,1], color= "grey", linestyle = "--")
 
     # make the plot readable
     plt.xlabel("False positive rate", fontsize=12)
     plt.ylabel("True positive rate", fontsize=12)
+    plt.title(title)
     plt.legend(frameon=False)
     plt.show()
     return fig
